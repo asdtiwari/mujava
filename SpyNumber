@@ -1,0 +1,45 @@
+/* SPY Number: Those numbers whose digits' product and sum are equal.
+WAJP to print the series of SPY Numbers within given range */
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("SPY Numbers");
+        
+        System.out.println("Enter the starting and ending point");
+        int start = scan.nextInt();
+        int end = scan.nextInt();
+        
+        int number, remainder, sum, product;
+        while(start <= end){
+            
+            // Assigning value to seperate variable to ensure the original number remain unchanged
+            number = start;
+            // Assigning sum to zero so that no garbage value be there
+            sum = 0;
+            // Assigning product to 1 because if 0 then finally we'll get 0 only
+            product = 1;
+            
+            while(number > 0){
+                // To get least significant digit from number
+                remainder = number % 10;
+                // To perform addition of digits
+                sum = sum + remainder;
+                // To perform multiplication of digits
+                product = product * remainder;
+                // To remove least signigicant digit from number
+                number = number / 10;
+            }
+            
+            if(sum == product)
+                System.out.print(start + " ");
+            
+            start++;
+        }
+    }
+} 
