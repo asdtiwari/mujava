@@ -1,0 +1,56 @@
+/* WAJP to print the series for armstrong numbers within given range
+Armstrong Numbers: A number whose summation of their total number of digit power to its digit is equal to the same number
+Example: 1 = 1^1 = 1, 153 = 1^3 + 5^3 + 3^3 = 153, 1634 = 1^4 + 6^4 + 3^4 + 4^4 = 1634, etc. */
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Armstrong Series");
+        
+        System.out.println("Enter the starting and ending point");
+        int start = scan.nextInt();
+        int end = scan.nextInt();
+        
+        int remainder, digits, number, power, sum, i;
+        while(start <= end){
+            
+            number = start;
+            digits = 0;
+            
+            // To count no of digits
+            while(number > 0){
+                digits++;
+                number = number / 10;
+            }
+
+            // Re-assigning to number bacause it became 0 in previous loop
+            number = start;
+            sum = 0;
+            
+            while(number > 0){
+                remainder = number % 10;
+                i = 1;
+                power = 1;
+                
+                // calculate the digit power
+                while(i <= digits){
+                    power = power * remainder;
+                    i++;
+                }
+                
+                sum = sum + power;
+                number = number / 10;
+            }
+            
+            if(sum == start)
+                System.out.print(start + " ");
+            
+            start++;
+        }
+    }
+}
