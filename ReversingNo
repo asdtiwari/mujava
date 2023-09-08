@@ -1,0 +1,30 @@
+// WAJP to reverse any given Integer
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Reverse the Integer");
+        
+        System.out.print("Enter a number: ");
+        int num = scan.nextInt();
+        
+        int remainder = 0, reverse = 0;
+        while(num > 0){
+            // Extract LSD from Integer
+            remainder = num % 10;
+            // Shift one position toward left to reverse number
+            reverse = reverse * 10;
+            // Store the remainder at least significant digit's place
+            reverse = reverse + remainder;
+            // Shift one position toward right to given number
+            num = num / 10;
+        }
+        
+        System.out.println("Reverse is : " + reverse);
+    }
+} 
