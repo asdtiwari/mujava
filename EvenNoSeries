@@ -1,0 +1,24 @@
+// WAJP to print the series of even number within a given range
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Even Number Series");
+        
+        System.out.println("Enter starting and ending point ");
+        int start = scan.nextInt();
+        int end = scan.nextInt();
+        
+        while(start <= end)
+        {
+            if(start % 2 == 0)
+                System.out.print(" " + start);
+            start++;
+        }
+    }
+}
