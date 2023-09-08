@@ -1,0 +1,31 @@
+// WAJP to check the number of digit presence in given number
+
+import java.util.Scanner;
+
+public class Main{
+
+    public static void main (String[] args) {
+
+        System.out.println("Number of Digits in Postive Number");
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Enter any number : ");
+        int num = scan.nextInt();
+        
+        if(num <= 9)
+            System.out.println("One Digit Number");
+        
+        else if(num <= 99)
+            System.out.println("Two Digit Number");
+        
+        else if(num <= 999)
+            System.out.println("Three Digit Number");
+        
+        else if(num <= 9999)
+            System.out.println("Four Digit Number");
+        
+        else
+            System.out.println("More than Four Digit Number");
+    }
+}
