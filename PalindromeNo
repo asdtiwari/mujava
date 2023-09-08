@@ -1,0 +1,38 @@
+/* WAJP to print the series of palindrome numbers within given range.
+Palindrome Number: Those number which are equal to its reverse number
+Example: 1, 22, 333, 2002, etc...*/
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Palindrome Series");
+        
+        System.out.println("Enter starting and ending point");
+        int start = scan.nextInt();
+        int end = scan.nextInt();
+        
+        int remainder, reverse, number;
+        while(start <= end){
+            
+            number = start;
+            reverse = 0;
+            
+            while(number > 0){
+                remainder = number % 10;
+                reverse = reverse * 10;
+                reverse = reverse + remainder;
+                number = number / 10;
+            }
+            
+            if(reverse == start)
+                System.out.print(start + " ");
+                
+            start++;
+        }
+    }
+} 
