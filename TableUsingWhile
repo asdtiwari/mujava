@@ -1,0 +1,25 @@
+// WAJP to print the table using while loop
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+    
+        System.out.println(" Table ");
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Enter a number : ");
+        int number = scan.nextInt();
+        
+        int table;
+        
+        int multiple = 1;
+        while(multiple<=10){
+            table = number * multiple;
+            System.out.println(number + " * " + multiple + " = " + table);
+            multiple++;
+        }
+	}
+}
