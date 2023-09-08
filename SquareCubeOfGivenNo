@@ -1,0 +1,21 @@
+// WAJP to find the square & cube of any given Number
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String [] args){
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Square & Cube of number");
+        
+        System.out.println("Enter a number: ");
+        int num = scan.nextInt();
+        
+        int square = num * num;
+        
+        int cube = num * num * num;
+        
+        System.out.println("Square is " + square + "\n" + "Cube is " + cube);
+    }
+}
