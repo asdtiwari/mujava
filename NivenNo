@@ -1,0 +1,37 @@
+/* WAJP to print the series of Niven number within given range
+Niven Number: Those number which is divisible by the summation of it's digit then it is called niven number. It is also called harshed number.
+Example: 21, 111, 153 etc.*/
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Niven Series");
+        
+        System.out.println("Enter starting and ending point");
+        int start = scan.nextInt();
+        int end = scan.nextInt();
+        
+        int remainder, sum, number;
+        while(start <= end){
+            
+            number = start;
+            sum = 0;
+            
+            while(number > 0){
+                remainder = number % 10;
+                sum = sum + remainder;
+                number = number / 10;
+            }
+            
+            if(start % sum == 0)
+                System.out.print(start + " ");
+            
+            start++;
+        }
+    }
+}
