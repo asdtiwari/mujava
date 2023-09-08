@@ -1,0 +1,22 @@
+//WAP to get the summation of last digit of three number of three digit number
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+        
+        System.out.println("Summation");
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter three number of three digit: ");
+        int number1 = scan.nextInt();
+        int number2 = scan.nextInt();
+        int number3 = scan.nextInt();
+        
+        int sum = (number1%10) + (number2%10) + (number3%10);
+        
+        System.out.println("Middle digit sum is : " + sum);
+    }
+}
