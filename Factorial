@@ -1,0 +1,24 @@
+// WAJP to find the factorial of a number
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+    
+        System.out.println(" Factorial ");
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+        int number = scan.nextInt();
+        
+        int factorial = 1;
+        for(int i = number; i > 0; i--){
+            factorial = factorial * i;
+        }
+        
+        System.out.println("Factorial of " + number + " is " + factorial);
+        
+	}
+}
