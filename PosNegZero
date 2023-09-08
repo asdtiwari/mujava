@@ -1,0 +1,23 @@
+// WAJP to check whether the given integer is positive negative or zero
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+
+        System.out.println("Check the Number");
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter a number ");
+        int num = scan.nextInt();
+        
+        if(num == 0)
+            System.out.println("Number is Zero");
+        else if(num > 0)
+            System.out.println("Positive Number");
+        else
+            System.out.println("Negative Number ");
+    }
+}
