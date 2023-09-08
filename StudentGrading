@@ -1,0 +1,50 @@
+// WAJP to give the grade to students after asking their marks of five subject
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main (String[] args) {
+    
+        System.out.println("Grade"); 
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter the following subject's marks out of 100");
+        
+        System.out.print("Java : ");
+        int java = scan.nextInt();
+        
+        System.out.print("C++ : ");
+        int cpp = scan.nextInt();
+        
+        System.out.print("Data Structure : ");
+        int ds = scan.nextInt();
+        
+        System.out.print("Electronics : ");
+        int electronics = scan.nextInt();
+        
+        System.out.print("Data Communication : ");
+        int dc = scan.nextInt();
+        
+        int total = java + cpp + ds + electronics + dc;
+        
+        float percent = ((float)total/5);
+        System.out.println("Percentage : " + percent);
+        
+        if(percent >= 90)
+            System.out.println("Grade A+");
+        
+        else if(percent >= 75)
+            System.out.println("Grade A");
+        
+        else if(percent >= 60)
+            System.out.println("Grade B");
+        
+        else if(percent >= 45)
+            System.out.println("Grade C");
+        
+        else
+            System.out.println("Grade D");
+        
+    }
+}
