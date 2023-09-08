@@ -1,0 +1,21 @@
+// WAJP to get the ASCII value of any given Character
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main (String[] args) {
+        
+        System.out.println("ASCII Values");
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter any character: ");
+        char character = scan.next().charAt(0);
+        
+        int value = character;
+        
+        System.out.println("ASCII code of " + character + " is : " + value);
+        
+    }
+}
