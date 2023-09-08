@@ -1,0 +1,17 @@
+// WAJP to print hello world five times using looping construct
+
+public class Main{
+
+    public static void main (String[] args) {
+        
+        // loop initialization
+        int i = 1;
+        // Loop condition
+        while(i <= 5){ 
+            // Set of instruction that has to be iterate.
+            System.out.println("Hello World"); 
+            // loop controller
+            i++;
+        }
+    }   
+}
