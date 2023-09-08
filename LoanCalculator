@@ -1,0 +1,34 @@
+//WAJP for Loan Calculator
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String [] args){
+        
+        System.out.println("Loan Calculator");
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter Principle Amount: ");
+        double principle = scan.nextDouble();
+        
+        System.out.println("Enter Rate: ");
+        double rate = scan.nextDouble();
+        
+        System.out.println("Enter Time: ");
+        double time = scan.nextDouble();
+        
+        double simpleInterest = (principle*rate*time)/100;
+        
+        double amount = simpleInterest + principle;
+        
+        double months = time * 12;
+        
+        double emi = amount / months;
+        
+        System.out.println("Simple Interest : " + simpleInterest);
+        System.out.println("Amount : " + amount);
+        System.out.println("Months : " + months);
+        System.out.println("EMI : " + emi);
+    }
+}
